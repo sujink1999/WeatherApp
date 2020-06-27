@@ -13,7 +13,7 @@ searchForm.addEventListener('submit', (e)=>{
     m2.textContent = ''
 
     const location = searchInput.value
-    fetch('http://localhost:3000/weather?address='+location).then((data)=>{
+    fetch('/weather?address='+location).then((data)=>{
     data.json().then((res)=>{
         if(res.error){
             m1.textContent = res.error
